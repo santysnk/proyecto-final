@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+    <body>
+        <header>
+            <h1 class="cabeceraTienda"><a href="/pages/tienda.html">Tus Compras</a></h1>
+        </header>
+        <main class="carritoMain">
+        <section id="factura">
+            <h2>ESTAS COMPRANDO:</h2>
+            <table id="carrito-tabla">
+            <thead>
+                <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-lista">
+                <!-- Aquí se cargarán los productos -->
+            </tbody>
+            </table>
+            <h3 id="total">Total: $ 0</h3>
+            <button id="realizarCompra">Realizar Compra</button>
+        </section>
+        </main>
+
+        <!-- Script -->
+        <script src="../js/carrito.js"></script>
+    </body>
+</html>
+

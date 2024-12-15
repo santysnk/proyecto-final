@@ -1,0 +1,393 @@
+@font-face {
+  font-family: 'Kalam';
+  src: url('../fuentes/Kalam/Kalam-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('../fuentes/Kalam/Kalam-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('../fuentes/Kalam/Kalam-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Kalam', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+header {
+  position: relative;
+  padding: 20px; 
+  overflow: hidden;
+}
+
+/*-------------------------------- ESTILO: PAGINA INDEX ------------------------------------------ */
+
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.cabeceraIndex {
+  font-size: 5rem; 
+  font-weight: bold; 
+  padding-top: 1.5rem;
+  margin: 0; 
+  text-align: left;
+  color: transparent; /* Hace el texto transparente */
+  background: linear-gradient(to right, #b2f31b, #e761e7); /* Define el degradado */
+  background-clip: text; /* Aplica el fondo al texto */
+  -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+  -webkit-text-fill-color: transparent; /* Hace el relleno transparente */  
+  display: inline-block; /* Ajusta el ancho del fondo al texto */
+} 
+
+.menuIndex {
+  position: relative;
+  float: right;
+  top: 6.5rem;
+  right: 1rem;
+  color: transparent; 
+  background: linear-gradient(to right, #b2f31b, #e761e7); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-weight: bold;
+  font-size: 2.3rem; 
+  border: 0;
+  margin: 0;
+}
+
+.menuIndexlista {
+  position: relative;
+  font-weight: bold;
+  font-size: 2.5rem; /* Tamaño del texto del enlace */
+  color: transparent;
+  background: linear-gradient(to right, #6cbdf3, #ff4eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  display: inline-block; 
+  margin: 0;
+}
+
+.mainIndex {
+background: linear-gradient(to right, #b2f31b, #e761e7); 
+z-index: -1;
+}
+
+.imagenPresentacion {
+  position: relative;
+  padding-top: 0.1rem;
+  width: 99.9%;
+  height: 100%;
+  height: auto; /* Ajusta la altura proporcionalmente */
+  margin: 0 auto; /* Centra horizontalmente */
+  display: block; /* Asegura que el elemento sea tratado como un bloque */
+}
+
+.overlay-text1 {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  width: 560px;
+  height: 240px;
+  top: 46%; /* Centra verticalmente */
+  left: 65%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el texto al centro exacto */
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+  font-size: 2rem; /* Ajusta el tamaño de la fuente */
+  font-weight: bold; /* Resalta el texto */
+  text-align: left; /* Centra el texto */
+  margin: 0;
+  padding: 30px 25px 0px 25px; /* Espaciado alrededor del texto */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  overflow: hidden; /* Asegura que no se desborde */
+}
+
+.overlay-text2 {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  width: 560px;
+  height: 235px;
+  top: 175%; /* Centra verticalmente */
+  left: 34.4%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el texto al centro exacto */
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+  font-size: 2rem; /* Ajusta el tamaño de la fuente */
+  font-weight: bold; /* Resalta el texto */
+  text-align: left; /* Centra el texto */
+  margin: 0;
+  padding: 30px 25px 0px 25px;/* Espaciado alrededor del texto */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  overflow: hidden; /* Asegura que no se desborde */
+}
+
+.overlay-text3 {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  width: 560px;
+  height: 280px;
+  top: 320%; /* Centra verticalmente */
+  left: 58%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el texto al centro exacto */
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+  font-size: 2rem; /* Ajusta el tamaño de la fuente */
+  font-weight: bold; /* Resalta el texto */
+  text-align: left; /* Centra el texto */
+  margin: 0;
+  padding: 30px 25px 0px 25px;/* Espaciado alrededor del texto */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  overflow: hidden; /* Asegura que no se desborde */
+}
+
+.hidden {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(10px); /* Pequeño desplazamiento hacia abajo */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+}
+
+.visible {
+  opacity: 1; /* Hace el texto visible */
+  transform: translateY(0); /* Restaura la posición original */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-section {
+  position: relative;
+  width: 65rem;
+  font-size: 1.2rem; /* Aumenta el tamaño de la letra */
+  line-height: 1.3; /* Aumenta la separación entre líneas */
+  font-weight: bold; /* Aplica negrita al texto */
+  text-align: left; /* Justifica el texto */
+  padding: 10px 20px; /* Espaciado interno: arriba/abajo 20px, izquierda/derecha 40px */
+  background: transparent;
+}
+
+
+/*-------------------------------- ESTILO: PAGINA TIENDA ------------------------------------------ */
+
+.bannerTienda {
+  position: absolute;
+  top: 0;
+  left:0rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.cabeceraTienda {
+  position: relative;
+  height: 6rem;
+  font-size: 5.0rem; /* Tamaño del texto principal */
+  font-weight: bold;
+  text-align: left; /* Alinea todo el texto a la izquierda */
+  color: transparent;
+  background: linear-gradient(to right, #6cbdf3, #ff4eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Ajusta el ancho del fondo al texto */
+  margin: 0;
+}
+
+.tiendaContent {
+  position: relative;
+  height: 6rem;
+  text-align: left; /* Alinea todo el contenido del encabezado a la izquierda */
+  display: inline-block; /* Ajusta el ancho del fondo al texto */
+}
+
+.menuTienda {
+  border: 0;
+  margin-top: 10px;
+  padding-left: 0.5rem;
+  
+}
+
+.menuTiendaLista {
+  position: relative;
+  font-weight: bold;
+  font-size: 2.5rem; /* Tamaño del texto del enlace */
+  color: transparent;
+  background: linear-gradient(to right, #6cbdf3, #ff4eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  display: inline-block; 
+  margin: 0;
+  
+}
+
+.tiendaBotonCarrito {
+  border: 0;
+  width: 100px;
+  margin-top: 120px;
+  text-align: right;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+
+.mainTienda {
+  background: linear-gradient(to right, #6cbdf3, #ff4eff); 
+  z-index: -1;
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  }
+
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/*-------------------------------- ESTILO: PAGINA CARRITO ------------------------------------------ */
+
+.carritoMain {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #6cbdf3, #ff4eff); 
+  z-index: -1;
+}
+
+/* Estilo de la tabla */
+#carrito-tabla {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse; /* Elimina el espacio entre bordes */
+  font-family: Arial, sans-serif;
+  background-color: #fcfcfc3f;
+}
+
+#carrito-tabla th, #carrito-tabla td {
+  border: 1px solid #0a0a0a;
+  padding: 10px 15px; /* Espaciado interno */
+  text-align: left;
+}
+
+#carrito-tabla th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+#carrito-tabla td {
+  vertical-align: middle; /* Alinea verticalmente */
+}
+
+/* Alineación específica */
+#carrito-tabla td:nth-child(1) { /* Producto */
+  text-align: left;
+  width: 50%; /* Ancho de columna */
+  font-weight: bold;
+}
+
+#carrito-tabla td:nth-child(2) { /* Precio */
+  text-align: center;
+  width: 10%;
+  font-weight: bold;
+}
+
+#carrito-tabla td:nth-child(3) { /* Botón eliminar */
+  text-align: center;
+  width: 1%;
+}
+
+/* Estilo del botón Eliminar */
+.eliminar-btn {
+  background-color: #ebf3ec;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.eliminar-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Estilo del botón Realizar Compra */
+#realizarCompra {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+#realizarCompra:hover {
+  background-color: #218838;
+}
+
+/* Estilo para el total */
+#total {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+

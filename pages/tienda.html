@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+  <body>
+    <header>
+      <img src="../images/phone.jpg" alt="Banner de teléfonos" class="bannerTienda">
+      <div class="tiendaContent">
+        <h1 class="cabeceraTienda">TIENDA CONEX</h1>
+        <nav class="menuTienda">
+          <li class="menuTiendaLista"><a href="../index.html">Inicio</a></li>
+        </nav>
+      </div>
+      <button class="tiendaBotonCarrito" id="botonCarrito">CARRITO</button>
+
+    </header>
+    
+    <main class="mainTienda">
+      <section class="productos">
+        <!-- Aquí se cargarán los productos dinámicamente desde cargarProductos.js -->
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="../js/cargarProductos.js"></script> <!-- Script que carga los productos -->
+  </body>
+</html>
+
